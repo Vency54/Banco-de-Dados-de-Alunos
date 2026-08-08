@@ -1,10 +1,10 @@
-# 📝 Gerenciador de Tarefas
+# Gerenciador de Tarefas
 
 Aplicação desktop para gerenciamento de tarefas desenvolvida em **C# com Windows Forms**, utilizando **SQL Server** para armazenamento dos dados.
 
 O projeto permite cadastrar, visualizar, concluir e excluir tarefas, demonstrando conceitos de desenvolvimento de aplicações desktop, operações CRUD e integração com banco de dados.
 
-## 🚀 Tecnologias
+## Tecnologias
 
 * **C#**
 * **.NET 8**
@@ -14,7 +14,7 @@ O projeto permite cadastrar, visualizar, concluir e excluir tarefas, demonstrand
 * **Visual Studio**
 * **Git / GitHub**
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 * [x] Cadastro de tarefas
 * [x] Listagem de tarefas
@@ -23,25 +23,28 @@ O projeto permite cadastrar, visualizar, concluir e excluir tarefas, demonstrand
 * [x] Persistência dos dados no SQL Server
 * [x] Interface gráfica com Windows Forms
 
-## 📂 Estrutura do projeto
+## Estrutura do projeto
 
 ```text
 Gerenciador-de-Tarefas/
 │
-├── Banco/
-│   └── banco.sql
-│
+|
 ├── atividade/
-│   ├── Program.cs
-│   ├── Form1.cs
+│   ├── Aluno.cs
+│   ├── atividade.csproj
 │   ├── Form1.Designer.cs
-│   └── atividade.csproj
-│
-├── atividade.sln
+│   ├── Form1.cs
+│   ├── Form1.resx
+│   ├── Program.cs
+│   └── Validades.cs
+|
+├── aAtividade.sln
+│   
+├── banco.sql
 └── README.md
 ```
 
-## 🗄️ Configuração do banco de dados
+## Configuração do banco de dados
 
 ### 1. Instale o SQL Server
 
@@ -52,7 +55,7 @@ O projeto utiliza **SQL Server** para armazenar as tarefas.
 Abra o **SQL Server Management Studio (SSMS)** e execute o arquivo:
 
 ```text
-Banco/banco.sql
+banco.sql
 ```
 
 Esse script cria o banco de dados, as tabelas e os dados necessários para executar a aplicação.
@@ -60,20 +63,20 @@ Esse script cria o banco de dados, as tabelas e os dados necessários para execu
 ### 3. Configure a conexão
 
 No código do projeto, configure a conexão com o seu SQL Server.
+> O nome do servidor pode variar de acordo com a instalação do SQL Server.
 
 Exemplo:
 
 ```csharp
 string connectionString =
     "Server=localhost\\SQLEXPRESS;" +
-    "Database=GerenciadorTarefas;" +
+    "Database=DbAcademico;" +
     "Trusted_Connection=True;" +
     "TrustServerCertificate=True;";
 ```
 
-> O nome do servidor pode variar de acordo com a instalação do SQL Server.
 
-## ▶️ Como executar
+## Como executar
 
 ### Pelo Visual Studio
 
@@ -107,13 +110,13 @@ ou execute:
 Debug → Start Without Debugging
 ```
 
-## 💾 Versão executável
+##  Versão executável
 
 Uma versão publicada da aplicação pode ser disponibilizada na seção **Releases** deste repositório.
 
 Para utilizar a versão executável, é necessário que o banco de dados esteja configurado conforme as instruções acima.
 
-## 🎯 Objetivo
+## Objetivo
 
 Este projeto foi desenvolvido como parte do meu aprendizado em desenvolvimento de software, com foco em:
 
@@ -124,12 +127,6 @@ Este projeto foi desenvolvido como parte do meu aprendizado em desenvolvimento d
 * SQL
 * Organização de projetos
 * Versionamento com Git e GitHub
-
-## 👨‍💻 Autor
-
-**João Victor Venceslau**
-
-Estudante de **Análise e Desenvolvimento de Sistemas**.
 
 ---
 
